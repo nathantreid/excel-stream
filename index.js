@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 var _        = require('lodash') // Just use lodash omg!
 var fs       = require('fs')
-var chpro    = require('child_process')
 
 var through  = require('through')
 var csv      = require('fast-csv')
@@ -9,7 +8,7 @@ var tmp      = require('tmp')
 var duplexer = require('duplexer')
 var concat   = require('concat-stream')
 
-var spawn = chpro.spawn
+var spawn = require('cross-spawn')
 
 module.exports = function (options) {
 
